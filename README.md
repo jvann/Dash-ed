@@ -1,10 +1,30 @@
 # Dash-ed
 
+Proyecto en desarollo por alumnos de ITESM campus Monterrey
+
 Integrantes:
-Fernando López Martínez A01172527
-Juan Pestana A00817057
-Edgardo Acosta Leal A00813103
-Jorge Ivan Diaz Sanchez A01191342
+
+Instructor:
+* Alfredo Salazar
+
+Desarolladores:
+* Fernando López Martínez A01172527
+* Juan Pestana A00817057
+* Edgardo Acosta Leal A00813103
+* Jorge Ivan Diaz Sanchez A01191342
+
+Coordinador de proyecto:
+* Jorge Ivan Diaz Sanchez
+
+Coordinador de backend:
+* Fernando Lopez Martinez
+
+Coordinador FrontEnd:
+* Jorge Ivan Diaz Sanchez
+
+Cliente:
+* Jorge Ivan Diaz Sanchez
+* Ivan Mena
 
 Descripcion:
 
