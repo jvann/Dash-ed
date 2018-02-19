@@ -15,15 +15,18 @@ comunidad para que los maestros aporten con información, creación y revisión 
 reactivos (preguntas). También se desarrollará un portal para los administradores
 para que puedan dar de alta nuevos contenidos, reactivos, relación de OEA’s
 (Objetivo Específico de Aprendizaje), y revisión de reactivos.
+
 El proyecto cumplirá los siguientes propósitos:
-● Proporcionar una herramienta administrativa para La Empresa:
-○ Dar de alta contenidos (Reactivos en masa, links, relación de OEAs,
+
+
+* Proporcionar una herramienta administrativa para La Empresa:
+* Dar de alta contenidos (Reactivos en masa, links, relación de OEAs,
 aceptación y revisión de reactivos).
-○ Modificación de contenidos.
+* Modificación de contenidos.
 
-● Proporcionar una herramienta para los usuarios de La Empresa:
-○ Una comunidad (Estilo red social)
+* Proporcionar una herramienta para los usuarios de La Empresa:
+* Una comunidad (Estilo red social)
 
-○ Aportar contenidos y reactivos.
-○ Generador de prácticas y exámenes.
-○ Ver noticias e información relevante proporcionado por la Empresa.
+* Aportar contenidos y reactivos.
+* Generador de prácticas y exámenes.
+* Ver noticias e información relevante proporcionado por la Empresa.
