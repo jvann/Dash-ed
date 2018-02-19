@@ -16,7 +16,7 @@ Desarolladores:
 Coordinador de proyecto:
 * Jorge Ivan Diaz Sanchez
 
-Coordinador de backend:
+Coordinador de BackEnd:
 * Fernando Lopez Martinez
 
 Coordinador FrontEnd:
