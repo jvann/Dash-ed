@@ -1,4 +1,7 @@
 #gitignore for WebStorm
 .idea/
 
-# Others
+#gitignore for Materialize Admin Template
+/Dashed/front-end
+/Dashed/grunt
+/Dashed/starter-kit
