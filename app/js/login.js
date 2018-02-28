@@ -7,7 +7,6 @@ function registerUser() {
 }
 
 
-
 $(document).ready(function () {
     console.log("Ready");
 
@@ -32,7 +31,7 @@ $(document).ready(function () {
     $('#user_login').submit(function (e) {
         e.preventDefault();
         var data = $('#user_login').serializeArray();
-        alert(data[0].value + " <-> "+  data[1].value);
+        alert(data[0].value + " <-> " + data[1].value);
 
     });
     // Get values from form register
@@ -41,6 +40,30 @@ $(document).ready(function () {
         var data = $('#register_form').serializeArray();
         alert(data.length);
         console.log(data);
+    });
+
+    $('#forget_pass').click(function (e) {
+        e.preventDefault();
+        swal({
+            title: 'Send Mail',
+            text: 'Enter email to restore password ',
+            type: 'input',
+            input: 'email',
+            inputPlaceholder: "Email",
+            showCancelButton: true,
+            closeOnConfirm: true,
+            showLoaderOnConfirm: true
+        }, function (inputValue) {
+            setTimeout(function () {
+                if (inputValue === false) return false;
+                if (inputValue === "") {
+                    swal.showInputError("You need to write something!");
+                    return false;
+                }
+                swal("Request send", 'Email send to: ' + inputValue, "success");
+            });
+        });
+
     });
 
 
