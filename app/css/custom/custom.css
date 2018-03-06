@@ -17,3 +17,8 @@ footer.page-footer {
     color: #fff;
     background-color: #26c6da;
 }
+
+img.landingimage {
+    max-width: 100%;
+    max-height: 50%;
+}
