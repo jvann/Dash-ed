@@ -91,34 +91,47 @@ Author: JirenSama
             </div>
         </nav>
         <!-- HORIZONTAL NAV START-->
+        <!--TODO:Decide about homepage and information delegation.-->
         <nav id="horizontal-nav" class="white hide-on-med-and-down">
             <div class="nav-wrapper" style="margin-left: 16%;">
                 <ul id="ul-horizontal-nav" class="left hide-on-med-and-down">
                     <li>
-                        <a class="dropdown-menu" href="../../../documentation" data-activates="Pagesdropdown">
+                        <a class="dropdown-menu" href="home-page.html" data-activates="Pagesdropdown">
                             <i class="material-icons">import_contacts</i>
-                            <span>Documentarion</span>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-menu" href="../../../documentation" data-activates="Pagesdropdown">
+                        <a class="dropdown-menu" href="#" data-activates="Pagesdropdown">
                             <i class="material-icons">import_contacts</i>
-                            <span>Documentarion</span>
+                            <span>Learning</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-menu" href="https://pixinvent.ticksy.com" target="_blank" data-activates="Pagesdropdown">
-                            <i class="material-icons">help_outline</i>
-                            <span>Support</span>
+                        <a class="dropdown-menu" href="#" target="_blank" data-activates="Pagesdropdown">
+                            <i class="material-icons">import_contacts</i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-menu" href="#" target="_blank" data-activates="Pagesdropdown">
+                            <i class="material-icons">import_contacts</i>
+                            <span>Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-menu" href="#" target="_blank" data-activates="Pagesdropdown">
+                            <i class="material-icons">import_contacts</i>
+                            <span>Inspiration</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!-- Pagesdropdown -->
-        <ul id="Pagesdropdown" class="dropdown-content dropdown-horizontal-list">
-            <li class="active"><a href="page-blank.html">Blank</a></li>
-        </ul>
+        <!--<ul id="Pagesdropdown" class="dropdown-content dropdown-horizontal-list">-->
+            <!--<li class="active"><a href="page-blank.html">Blank</a></li>-->
+        <!--</ul>-->
     </div>
     <!-- end header nav-->
 </header>
@@ -168,7 +181,7 @@ Author: JirenSama
                     </li>
                 </ul>
             </div>
-            <div class="section white">
+            <div class="section white" id="promoparallax">
                 <div class="row container col s12 m4 l2">
                     <div class="col s4">
                         <div class="center promo right">
@@ -197,49 +210,54 @@ Author: JirenSama
                 <div class="parallax"><img src="../assets/images/parallax/classroom2.jpg"></div>
             </div>
             <div class="section white">
-                <div class="row container">
+                <div class="row container" id="infoparallax1">
                     <h2 class="header">Information 1</h2>
-                    <p class="grey-text text-darken-3 lighten-3">Informacion about the page here.</p>
+                    <p class="grey-text text-darken-3 lighten-3">Information about the page 1 here.</p>
                 </div>
             </div>
             <div class="parallax-container">
                 <div class="parallax"><img src="../assets/images/parallax/classroom2.jpg"></div>
             </div>
-
+            <div class="section white" id="infoparallax2">
+                <div class="row container">
+                    <h2 class="header">Information 2</h2>
+                    <p class="grey-text text-darken-3 lighten-3">Information about the page 2 here.</p>
+                </div>
+            </div>
             <!--end parallax-->
             <!-- TODO: Find use for this floating action buttons -->
             <!--start container-->
-            <!--<div class="container">-->
-                <!--&lt;!&ndash; Floating Action Button &ndash;&gt;-->
-                <!--<div class="fixed-action-btn" style="bottom: 50px; right: 19px;">-->
-                    <!--<a class="btn-floating btn-large blue">-->
-                        <!--<i class="material-icons">help_outline</i>-->
-                    <!--</a>-->
-                    <!--<ul>-->
-                        <!--<li>-->
-                            <!--<a href="css-helpers.html" class="btn-floating blue">-->
-                                <!--<i class="material-icons">help_outline</i>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="cards-extended.html" class="btn-floating green">-->
-                                <!--<i class="material-icons">widgets</i>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="app-calendar.html" class="btn-floating amber">-->
-                                <!--<i class="material-icons">today</i>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="app-email.html" class="btn-floating red">-->
-                                <!--<i class="material-icons">mail_outline</i>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; Floating Action Button &ndash;&gt;-->
-            <!--</div>-->
+            <div class="container">
+                <!-- Floating Action Button -->
+                <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
+                    <a class="btn-floating btn-large blue">
+                        <i class="material-icons">help_outline</i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#header" class="btn-floating blue">
+                                <i class="material-icons">help_outline</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#promoparallax" class="btn-floating green">
+                                <i class="material-icons">widgets</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#infoparallax1" class="btn-floating amber">
+                                <i class="material-icons">today</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#infoparallax2" class="btn-floating red">
+                                <i class="material-icons">mail_outline</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Floating Action Button -->
+            </div>
             <!--end container-->
         </section>
         <!-- END CONTENT -->
