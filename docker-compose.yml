@@ -12,15 +12,15 @@ services:
     depends_on:
       - postgres
     environment:
-      DATABASE_URL: postgres://appname:docker@postgres/appdb
+      DATABASE_URL: postgres://dashed:mypass@postgres/dasheddb
   postgres:
     image: postgres:9.6.8-alpine
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: appname
-      POSTGRES_PASSWORD: docker
-      POSTGRES_DB: appdb
+      POSTGRES_USER: dashed
+      POSTGRES_PASSWORD: mypass
+      POSTGRES_DB: dasheddb
     volumes:
     - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
     - ./postgres-data:/var/lib/postgresql/data
