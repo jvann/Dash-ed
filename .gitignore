@@ -1,4 +1,7 @@
 #gitignore for WebStorm
 .idea/
 
-# Others
+# Backend
+node_modules
+postgres-data
+.DS_Store
