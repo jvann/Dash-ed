@@ -50,3 +50,33 @@ aceptación y revisión de reactivos).
 * Aportar contenidos y reactivos.
 * Generador de prácticas y exámenes.
 * Ver noticias e información relevante proporcionado por la Empresa.
+
+## Backend
+
+### Installing
+Download the entire folder to your computer and then open your terminal and navigate to its location.
+
+Then run
+
+```
+docker-compose up
+```
+This will start `yarn run start` and start `server.js`.
+
+
+For shutting down use
+```
+docker-compose down
+```
+
+For shutting down and removing the image run
+```
+docker-compose down --rmi local
+```
+
+### Bash
+For entering to bash open a new terminal and run 
+
+```
+docker-compose exec api bash
+```

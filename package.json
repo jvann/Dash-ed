@@ -1,0 +1,19 @@
+{
+  "name": "node-web-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon --watch ./src --ignore ./src/__tests__ -x \"yarn run start\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.14.0",
+    "knex": "^0.14.4",
+    "objection": "^1.0.0",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}

@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  api:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+    command: yarn run dev
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://appname:docker@postgres/appdb
+  postgres:
+    image: postgres:9.6.8-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: appname
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: appdb
+    volumes:
+    - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    - ./postgres-data:/var/lib/postgresql/data
