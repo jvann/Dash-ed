@@ -34,7 +34,11 @@
     <script type="text/javascript" src="vendors/jquery-3.2.1.min.js"></script>
     <link href="vendors/sweetalert/dist/sweetalert.css" type="text/css" rel="stylesheet">
 
+    <!-- SCRIPTS FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <!-- END SCRIPTS FIREBASE -->
 
+    <!-- custom js for login -->
     <script type="application/javascript" src="js/login.js"></script>
 
 </head>
@@ -52,7 +56,7 @@
         <form class="login-form" name="login-form" id="user_login">
             <div class="row">
                 <div class="input-field col s12 center">
-                    <img src="assets/images/logo/login-logo.png" alt=""
+                    <img src="assets/images/logo/D.png" alt="Dash-ed"
                          class="circle responsive-img valign profile-image-login">
                     <p class="center login-form-text">Dash-ed Login</p>
                 </div>
@@ -85,10 +89,11 @@
             </div>
             <div class="row">
                 <div class="input-field col s6 m6 l6">
-                    <p class="margin medium-small"><a id="bt_register">Register Now!</a></p>
+                    <p class="margin medium-small"><a class="submit" id="bt_register">Register Now!</a></p>
                 </div>
                 <div class="input-field col s6 m6 l6">
-                    <p class="margin right-align medium-small"><a id="forget_pass">Forgot password ?</a></p>
+                    <p class="margin right-align medium-small"><a class="submit" id="forget_pass">Forgot password ?</a>
+                    </p>
                 </div>
             </div>
         </form>
@@ -105,50 +110,48 @@
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="material-icons prefix pt-5">account_circle</i>
-                    <input id="first_name" type="text" required>
+                    <input id="first_name" name="first_name" type="text" required>
                     <label class="center-align">First Name</label>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="material-icons prefix pt-5">account_circle</i>
-                    <input id="last_name" type="text" required>
+                    <input id="last_name" name="last_name" type="text" required>
                     <label for="username" class="center-align">Last Name</label>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="material-icons prefix pt-5">email</i>
-                    <input id="email" type="email" required>
+                    <input id="email" name="email" type="email" required>
                     <label for="email" class="center-align">Email</label>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="material-icons prefix pt-5">phone</i>
-                    <input id="phone" type="tel">
+                    <input id="phone" name="phone" type="tel">
                     <label for="email" class="center-align">Telephone</label>
                 </div>
             </div>
-            <div class="row margin">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix pt-5">flag</i>
-                    <select required>
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="3">AL</option>
-                        <option value="3">CA</option>
-                        <option value="1">TX</option>
-                        <option value="2">NY</option>
-                    </select>
-                    <label>State</label>
-                </div>
-
-
-            </div>
+            <!--<div class="row margin">-->
+            <!--<div class="input-field col s12">-->
+            <!--<i class="material-icons prefix pt-5">flag</i>-->
+            <!--<select required>-->
+            <!--<option value="" disabled selected>Select an option</option>-->
+            <!--<option value="3">AL</option>-->
+            <!--<option value="3">CA</option>-->
+            <!--<option value="1">TX</option>-->
+            <!--<option value="2">NY</option>-->
+            <!--</select>-->
+            <!--<label>State</label>-->
+            <!--</div>-->
+            <!--</div>-->
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="material-icons prefix pt-5">lock_outline</i>
-                    <input id="password" type="password">
+                    <input id="password" name="password" type="password">
                     <label for="password">Password</label>
                 </div>
             </div>
@@ -157,7 +160,8 @@
                     <button class="btn waves-effect waves-light col s12" type="submit">Register Now</button>
                 </div>
                 <div class="input-field col s12">
-                    <p class="margin center medium-small sign-up">Already have an account? <a id="bt_login">Login</a>
+                    <p class="margin center medium-small sign-up">Already have an account? <a class="submit"
+                                                                                              id="bt_login">Login</a>
                     </p>
                 </div>
             </div>
