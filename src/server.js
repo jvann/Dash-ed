@@ -22,10 +22,7 @@ class User extends Model {
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send({
-        name: 'Test',
-        likes: ['Biking', 'Dancing', 'Coding']
-    });   
+    res.send('Hello Dash-ed REST API!');   
 });
 
 app.get('/user/:email', (req, res) => {
