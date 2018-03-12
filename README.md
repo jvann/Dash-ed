@@ -53,6 +53,10 @@ aceptación y revisión de reactivos).
 
 ## Backend
 
+### Prerequisites
+
+You need to have Dockers installed on your local machine.
+
 ### Installing
 Download the entire folder to your computer and then open your terminal and navigate to its location.
 
@@ -61,18 +65,28 @@ Then run
 ```
 docker-compose up
 ```
-This will start `yarn run start` and start `server.js`.
-
+This will run `yarn run start` and start `app.js` in `localhost:3000`.
 
 For shutting down use
 ```
 docker-compose down
 ```
 
-For shutting down and removing the image run
+For shutting down and removing the created images run
 ```
 docker-compose down --rmi local
 ```
+
+### Tests
+For running the tests run
+
+```
+docker-compose run api /bin/bash -c 'yarn run test'
+```
+
+This will create a new container and run the `*.tests.js` files using `jest`.
+
+If you ran the above command without running `docker-compose up` previously, make sure to run `docker-compose down` after testing in order to remove the `postgres` image created.
 
 ### Bash
 For entering to bash open a new terminal and run 

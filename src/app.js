@@ -22,7 +22,7 @@ class User extends Model {
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('Hello Dash-ed REST API!');   
+    res.send({text: 'Hello Dash-ed REST API!1'});   
 });
 
 app.get('/user/:email', (req, res) => {
@@ -61,3 +61,5 @@ app.post('/user', (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server is up on port ${port}`));
+
+module.exports = { app };
