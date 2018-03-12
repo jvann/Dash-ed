@@ -54,7 +54,6 @@ aceptación y revisión de reactivos).
 ## Backend
 
 ### Prerequisites
-
 You need to have Dockers installed on your local machine.
 
 ### Installing
@@ -65,7 +64,12 @@ Then run
 ```
 docker-compose up
 ```
-This will run `yarn run start` and start `app.js` in `localhost:3000`.
+This will run `yarn run dev` and start `app.js` in `localhost:3000`.
+
+For omitting the logs run
+```
+docker-compose up -d
+```
 
 For shutting down use
 ```
@@ -77,20 +81,32 @@ For shutting down and removing the created images run
 docker-compose down --rmi local
 ```
 
-### Tests
-For running the tests run
-
-```
-docker-compose run api bash -c 'yarn run test'
-```
-
-This will create a new container and run the `*.tests.js` files using `jest`.
-
-If you ran the above command without running `docker-compose up` previously, make sure to run `docker-compose down` after testing in order to remove the `postgres` image created.
-
 ### Bash
-For entering to bash open a new terminal and run 
+For entering to bash inside the nodejs container created open a new terminal and run 
 
 ```
 docker-compose exec api bash
 ```
+
+### Making changes
+Because of the bind volume created, all of the changes you make to the files in the host, will take effect inside the container. After making a change inside a `*.js` file, just save the file and `nodemon` will restart `app.js` automatically.
+
+### Adding node modules
+Once you add/remove/upgrade a node module inside bash, `package.json` will change. Nevertheless, the next time you create new containers, the changes won't take effect. In order to the new change take effect, you have to re-build the image using
+
+```
+docker-compose build
+```
+
+This will re-build the images, causing the `package.json` file to be copied into the nodejs container and re-run `yarn install && yarn cache clean` inside the container.
+
+### Tests
+For running the tests run
+
+```
+docker-compose run --rm api bash -c 'yarn run test'
+```
+
+This will create a new container and run the `*.tests.js` files using `jest`. To exit just Ctrl+c.
+
+If you ran the above command without running `docker-compose up` previously, make sure to run `docker-compose down` after testing in order to remove the `postgres` image created.
