@@ -81,7 +81,7 @@ docker-compose down --rmi local
 For running the tests run
 
 ```
-docker-compose run api /bin/bash -c 'yarn run test'
+docker-compose run api bash -c 'yarn run test'
 ```
 
 This will create a new container and run the `*.tests.js` files using `jest`.
