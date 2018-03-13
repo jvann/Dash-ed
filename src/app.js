@@ -26,6 +26,7 @@ const controllers = require('./handlers');
 // Custom middleware
 const createReqLocals = require('./middleware/create-req-locals');
 const swaggerOperationController = require('./middleware/swagger-operation-controller');
+const sendControllerResponse = require('./middleware/send-controller-response');
 const errorHandler = require('./middleware/error-handler');
 
 app.use(bodyParser.json());
@@ -44,6 +45,7 @@ swaggerTools.initializeMiddleware(swaggerApi, middleware => {
     // Route validated requests to appropriate controller
     app.use(swaggerOperationController({ controllers }));
 
+    app.use(sendControllerResponse);
     app.use(errorHandler);
 
     app.get('/', (req, res) => res.send({text: 'Hello Dash-ed REST API!1'}));

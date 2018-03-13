@@ -1,6 +1,17 @@
 function createUser({ models, params }) {
+    const {newUser} = params;
+    const {firstName, emal} = newUser;
     console.log('models', models);
     console.log('params', params);
+    console.log('newUser', newUser.value);
+
+    // User.query().insert({ firstName, email }).then(data => {
+    //     console.log('Succes:', data);
+    //     res.send(201);
+    // }).catch(error => {
+    //     console.log('Error:', error);
+    //     res.send(400);
+    // });
     return;
     // const first_name = req.body.firstName;
     // const email = req.body.email;

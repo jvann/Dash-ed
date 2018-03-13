@@ -20,8 +20,9 @@ function swaggerOperationController({ controllers }) {
 
         return Promise.resolve(controllerForOperation(context))
             .then((result) => {
-                //req.locals.result = result;
-                return res.send(201);
+                req.locals.result = result;
+                next();
+                //return res.send(201);
             })
             .catch(next);
     }
