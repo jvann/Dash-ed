@@ -4,12 +4,14 @@
   "main": "server.js",
   "scripts": {
     "start": "node ./src/app.js",
-    "dev": "nodemon --watch ./src --ignore ./src/__tests__ -x \"yarn run start\"",
+    "dev": "nodemon --watch ./src --ignore ./src/__tests__ -x \"DEBUG=mw:* DEBUG_HIDE_DATE=true DEBUG_COLORS=true \"yarn run start\"\"",
     "test": "jest src/*.test.js"
   },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "boom": "^7.2.0",
+    "debug": "^3.1.0",
     "express": "4.14.0",
     "globby": "^8.0.1",
     "knex": "^0.14.4",

@@ -1,16 +1,16 @@
+const boom = require('boom');
 const get = require('lodash/get');
 
 function swaggerOperationController({ controllers }) {
-    return function(req, res, next) {
-        console.log('req.swagger', req.swagger);
+    return function(req, res, next) {    
         const operationId = get(req, 'swagger.operation.operationId');
         if (!operationId) {
-            return next();
+            return next(boom.notFound('operationId not found in Swagger definition'));
         }
 
         const controllerForOperation = controllers[operationId];
         if (!controllerForOperation) {
-            return next();
+            return next(boom.notImplemented('Handler not implemented'));
         }
 
         const context = {
