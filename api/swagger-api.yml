@@ -13,7 +13,6 @@ produces:
   - application/json
 paths:
   /users:
-    x-swagger-router-controller: User
     post:
       operationId: createUser
       summary: Create a new user

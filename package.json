@@ -11,6 +11,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "4.14.0",
+    "globby": "^8.0.1",
     "knex": "^0.14.4",
     "node-yaml": "^3.1.1",
     "objection": "^1.0.0",
