@@ -1,36 +1,24 @@
-const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
-const { Model } = require('objection');
-const Knex = require('knex');
-
-const port = process.env.PORT || 3000;
-
-const knex = Knex({
-    client: 'pg',
-    connection: process.env.DATABASE_URL
-});
-Model.knex(knex);
-
-class User extends Model {
-    static get tableName() {
-        return 'users';
-    }
-}
-
+const express = require('express');
 const swaggerTools = require('swagger-tools');
+
+const { db } = require('./db');
+const models = require('./models');
 const swaggerApi = require('./../api/swagger-api');
-
 const controllers = require('./handlers');
-
-// Custom middleware
 const createReqLocals = require('./middleware/create-req-locals');
 const swaggerOperationController = require('./middleware/swagger-operation-controller');
 const sendControllerResponse = require('./middleware/send-controller-response');
 const errorHandler = require('./middleware/error-handler');
 
+const app = express();
+const port = process.env.PORT || 3000;
+
 app.use(bodyParser.json());
 app.use(createReqLocals);
+
+app.locals.db = db;
+app.locals.models = models;
 
 swaggerTools.initializeMiddleware(swaggerApi, middleware => {
     // Interpret Swagger resources and attach metadata to request - must be first in swagger-tools middleware chain
@@ -46,6 +34,7 @@ swaggerTools.initializeMiddleware(swaggerApi, middleware => {
     app.use(swaggerOperationController({ controllers }));
 
     app.use(sendControllerResponse);
+    
     app.use(errorHandler);
 
     app.get('/', (req, res) => res.send({text: 'Hello Dash-ed REST API!1'}));
