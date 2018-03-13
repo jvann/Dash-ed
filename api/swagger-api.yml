@@ -1,0 +1,62 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: Dash-ed
+  description: REST API server for the Dash-ed application.
+host: dash-ed.herokuapp.com
+basePath: /v1
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /users:
+    x-swagger-router-controller: User
+    post:
+      operationId: createUser
+      summary: Create a new user
+      tags:
+        - Users
+      parameters:
+        - name: newUser
+          in: body
+          schema:
+            $ref: '#/definitions/NewUser'
+      responses:
+        201:
+          description: Created
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/User'
+
+definitions:
+  NewUser:
+    type: object
+    properties:
+      firstName:
+        type: string
+      email:
+        type: string
+        format: email
+    required:
+      - firstName
+      - email
+
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        minimum: 0
+      email:
+        type: string
+        format: email
+    required:
+      - id
+      - email
+      

@@ -66,9 +66,14 @@ docker-compose up
 ```
 This will run `yarn run dev` and start `app.js` in `localhost:3000`.
 
-For omitting the logs run
+For running in the background (and omitting all of the logs) run
 ```
 docker-compose up -d
+```
+
+then you can access the logs of a specific container like this
+```
+docker-compose logs -f api
 ```
 
 For shutting down use
