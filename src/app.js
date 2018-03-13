@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const { Model } = require('objection');
 const Knex = require('knex');
 
-const swaggerTools = require('swagger-tools');
 const swaggerApi = require('./../api/swagger-api');
+const swaggerTools = require('swagger-tools');
+const swaggerOperationController = require('./middleware/swagger-operation-controller');
+
 const controllers = require('./handlers');
 
 const port = process.env.PORT || 3000;
@@ -35,7 +37,7 @@ swaggerTools.initializeMiddleware(swaggerApi, middleware => {
     app.use(middleware.swaggerUi());
 
     // Route validated requests to appropriate controller
-    app.use(middleware.swaggerRouter({ controllers }));
+    app.use(swaggerOperationController({ controllers }));
 
     app.get('/', (req, res) => res.send({text: 'Hello Dash-ed REST API!1'}));
 
