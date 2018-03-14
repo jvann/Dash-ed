@@ -54,7 +54,7 @@ aceptación y revisión de reactivos).
 ## Backend
 
 ### Prerequisites
-You need to have Dockers installed on your local machine.
+You need to have Docker installed on your local machine.
 
 ### Installing
 Download the entire folder to your computer and then open your terminal and navigate to its location.
@@ -97,7 +97,7 @@ docker-compose exec api bash
 Because of the bind volume created, all of the changes you make to the files in the host, will take effect inside the container. After making a change inside a `*.js` file, just save the file and `nodemon` will restart `app.js` automatically.
 
 ### Adding node modules
-Once you add/remove/upgrade a node module inside bash, `package.json` will change. Nevertheless, the next time you create new containers, the changes won't take effect. In order to the new change take effect, you have to re-build the image using
+Once you add/remove/upgrade a node module inside bash, `package.json` will change. Nevertheless, the next time you create new containers, the changes won't take effect. For the new change to take effect, you must re-build the image using
 
 ```
 docker-compose build
@@ -112,6 +112,26 @@ For running the tests run
 docker-compose run --rm api bash -c 'yarn run test'
 ```
 
-This will create a new container and run the `*.tests.js` files using `jest`. To exit just Ctrl+c.
+This will create a new container and run the `./src/domain/**/*.test.js` files using `jest`. To exit just Ctrl+c.
 
 If you ran the above command without running `docker-compose up` previously, make sure to run `docker-compose down` after testing in order to remove the `postgres` image created.
+
+### Components
+#### api
+This folder contains the Swagger API specification for the REST API, which is loaded and converted for proper use inside nodejs.
+
+#### sql
+This folder contains the script for initializing the database.
+
+#### src
+This folder contains all of the logic for implementing the REST API.
+
+We're using swagger tools in order to integrate the API specification into the implementation. This allows us to use the definitions and validations described in the specification and use those to filter the incoming data, keeping our code in sync with the API reference. The middelwares used for doing that are:
+- `swaggerMetadata`: Interpret Swagger resources and attach metadata to request - must be first in swagger-tools middleware chain
+- `swaggerValidator`: Validate Swagger requests
+- `swaggerUi`: Serve the Swagger documents and Swagger UI in localhost:3000/docs
+
+The logic for implementing the handlers (controllers) of the validated requests is divided into the following middlewares:
+- `swaggerOperationController`: Route validated requests to an appropriate controller and extract all of the important data for the controllers.
+- `sendControllerResponse`: Verify the results of the controllers, this way the controllers doesn't have to worry about the response, keeping clean the code and omitiing the validation boilerplate code.
+- `errorHandler`: Manage the errors encountered in some middleware or controller logic up the middleware chain.

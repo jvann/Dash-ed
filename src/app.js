@@ -21,20 +21,11 @@ app.locals.db = db;
 app.locals.models = models;
 
 swaggerTools.initializeMiddleware(swaggerApi, middleware => {
-    // Interpret Swagger resources and attach metadata to request - must be first in swagger-tools middleware chain
     app.use(middleware.swaggerMetadata());
-
-    // Validate Swagger requests
     app.use(middleware.swaggerValidator());
-
-    // Serve the Swagger documents and Swagger UI
     app.use(middleware.swaggerUi());
-
-    // Route validated requests to appropriate controller
     app.use(swaggerOperationController({ controllers }));
-
     app.use(sendControllerResponse);
-
     app.use(errorHandler);
 
     app.listen(port, () => console.log(`Server is up on port ${port}`));
