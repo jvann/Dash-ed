@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./src/app.js",
     "dev": "nodemon --watch ./src --ignore ./src/__tests__ -x \"DEBUG=mw:* DEBUG_HIDE_DATE=true DEBUG_COLORS=true \"yarn run start\"\"",
-    "test": "jest src/*.test.js"
+    "test": "jest ./src/domain/**/*.test.js"
   },
   "license": "MIT",
   "dependencies": {
