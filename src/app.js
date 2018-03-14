@@ -34,10 +34,8 @@ swaggerTools.initializeMiddleware(swaggerApi, middleware => {
     app.use(swaggerOperationController({ controllers }));
 
     app.use(sendControllerResponse);
-    
-    app.use(errorHandler);
 
-    app.get('/', (req, res) => res.send({text: 'Hello Dash-ed REST API!1'}));
+    app.use(errorHandler);
 
     app.listen(port, () => console.log(`Server is up on port ${port}`));
 });

@@ -2,7 +2,18 @@ swagger: '2.0'
 info:
   version: '1.0.0'
   title: Dash-ed
-  description: REST API server for the Dash-ed application.
+  description: |
+    REST API server for the Dash-ed application.
+    
+    ## REST
+    Dash-ed is a RESTful API:
+    - It makes use of native concepts and techniques of HTTP
+    - It follows the constraints of REST
+    - It is defined in terms of endpoints and parameters
+    
+    ## JSON
+    The Dash-ed API uses exclusively JSON, so you should always set the
+    <strong>Content-type</strong> header to <strong>application/json</strong>.
 host: dash-ed.herokuapp.com
 basePath: /v1
 schemes:
@@ -12,6 +23,24 @@ consumes:
 produces:
   - application/json
 paths:
+  /:
+    get:
+      operationId: getRoot
+      summary: Get the entry point
+      responses:
+        200:
+          description: Ok
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  text:
+                    type: string
+                    default: Hello Dash-ed REST API!
+                required:
+                  - text
   /users:
     post:
       operationId: createUser
