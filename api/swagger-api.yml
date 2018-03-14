@@ -27,6 +27,8 @@ paths:
     get:
       operationId: getRoot
       summary: Get the entry point
+      tags:
+        - root
       responses:
         200:
           description: Ok
@@ -41,7 +43,6 @@ paths:
                     default: Hello Dash-ed REST API!
                 required:
                   - text
-
   /users:
     post:
       operationId: createUser
