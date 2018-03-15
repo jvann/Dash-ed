@@ -8,3 +8,6 @@
 
 #Remove all .DS_Store
 .DS_Store
+
+#Postgrade ignore
+/postgres-data
