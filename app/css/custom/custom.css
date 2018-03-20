@@ -58,8 +58,10 @@ div.landing-promo {
     background-color: white;
 }
 
+/*^^^^^^^^^^^^^Media Queries^^^^^^^^^^^^^^^^^^^^^*/
 @media only screen and (max-width: 420px) {
     .landing-section {
         margin-left: 1%;
     }
 }
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
