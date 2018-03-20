@@ -1,7 +1,17 @@
-#gitignore for WebStorm
+# ********** Common **********
+.DS_Store
+
+# ********** Front **********
+
+## WebStorm
 .idea/
 
-# Backend
+## Materialize Admin Template
+/Dashed/front-end
+/Dashed/grunt
+/Dashed/starter-kit
+
+# ********** Back **********
 node_modules
 postgres-data
-.DS_Store
+/postgres-data
