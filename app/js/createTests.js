@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    $('div').on('click', "button.toggleInput", function (e) {
+    // Toggle from text input to file input
+    $('.toggleInput').click(function (e) {
         e.preventDefault();
         $(this).closest('.row').find(':input').val("");
 
@@ -8,39 +9,28 @@ $(document).ready(function () {
         $(this).closest('.row').find('.imageInput').toggle();
     });
 
-    $('div').on('click', "button.deleteInput", function (e) {
+    // On submit function
+    $('.submitQuestion:not(.toggleInput)').submit(function (e) {
         e.preventDefault();
-        $(this).closest('.row').remove();
-    });
-
-
-    $('.btn-floating:not(.toggleInput,.deleteInput)').click(function (e) {
-        e.preventDefault();
-        var numberOfQuestions = $(this).closest('form').children('.answers').children('div').length + 1;
-
-        $(this).closest('form').find('.answers').append(
-        '<div class="row"><div class="col s2 center"><button type="button"class="toggleInput btn-floating waves-effect waves-light">' +
-            '<i class="material-icons">compare_arrows</i></button><button type="button" class="deleteInput btn-floating waves-effect waves-light">' +
-            '<i class="material-icons">clear</i></button></div><div class="input-field col s10 textInput" style="display: block">' +
-            '<input type="text" name="a'+numberOfQuestions+'"><label>Answer '+numberOfQuestions+'</label></div>' +
-            '<div class="col s12 m8 l9 imageInput" style="display: none"><div class="file-field input-field"><div class="btn">' +
-            '<span>Image</span><input type="file" name="file'+numberOfQuestions+'" accept=".png, .jpg, .jpeg"></div><div class="file-path-wrapper">' +
-            '<input class="file-path validate" type="text"></div></div></div></div>');
-
-    });
-
-    $('.submitQuestion:not(.toggleInput,.deleteInput)').submit(function (e) {
-        e.preventDefault();
-
 
         var i = 0;
-        var data = $(this).serializeArray().reduce(function (obj, item) {
+        // Get the closest form and from there the input not hidden
+        var data = $(this).closest('form').find(':input:not(:hidden)').serializeArray().reduce(function (obj, item) {
             // obj[item.name] = item.value;
             obj["answer" + i] = item.value;
             i++;
             return obj;
         }, {});
-        console.log(data);
+        // Get the closest text area content
+        data['description'] = $(this).parents('.row').prev('.description').find('.materialize-textarea').val();
+
+        // todo: TEST DELETE AFTER TEST
+        var test = 'TEST \n';
+        $.each(data, function (key, value) {
+            test += key + " -> " + value + "\n";
+        });
+        alert(test);
+        //
     });
 });
 
