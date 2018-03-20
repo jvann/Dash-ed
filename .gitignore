@@ -14,4 +14,3 @@
 # ********** Back **********
 node_modules
 postgres-data
-/postgres-data
