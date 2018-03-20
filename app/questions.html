@@ -45,6 +45,7 @@ Author: JirenSama
     <link href="vendors/sweetalert/dist/sweetalert.css" type="text/css" rel="stylesheet">
     <!-- Custom JS -->
     <script type="text/javascript" src="js/createTests.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
 
 </head>
 <style>
@@ -302,14 +303,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/bridgeMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -318,30 +321,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -350,30 +348,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -382,20 +375,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -404,7 +390,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
@@ -427,14 +414,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/mFlowMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -443,30 +432,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -475,30 +459,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -507,20 +486,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -529,7 +501,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
@@ -550,14 +523,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/flowMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -566,30 +541,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -598,30 +568,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -630,20 +595,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -652,7 +610,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
@@ -673,14 +632,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/dBubbleMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -689,30 +650,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -721,30 +677,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -753,20 +704,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -775,7 +719,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
@@ -796,14 +741,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/bubbleMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -812,30 +759,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -844,30 +786,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -876,20 +813,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -898,7 +828,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
@@ -919,14 +850,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/cFrameMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -935,30 +868,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -967,30 +895,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -999,20 +922,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -1021,7 +937,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
@@ -1042,14 +959,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/treeMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -1058,30 +977,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -1090,30 +1004,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -1122,20 +1031,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -1144,7 +1046,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
@@ -1165,14 +1068,16 @@ Author: JirenSama
                             <img class="question" src="assets/images/questions/braceMap.PNG">
                         </div>
                         <div class="row col s12 m6">
-                            <form class="col s12 m12 submitQuestion">
+                            <form class="col s12 m12 submitQuestion" >
                                 <div class="answers">
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -1181,30 +1086,25 @@ Author: JirenSama
                                             <label>Answer 1</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a1" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -1213,30 +1113,25 @@ Author: JirenSama
                                             <label>Answer 2</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="q2" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s2 center">
-                                            <button class="toggleInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="toggleInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">compare_arrows</i>
                                             </button>
-                                            <button class="deleteInput btn-floating waves-effect waves-light  ">
+                                            <button type="button"
+                                                    class="deleteInput btn-floating waves-effect waves-light  ">
                                                 <i class="material-icons">clear</i>
                                             </button>
                                         </div>
@@ -1245,20 +1140,13 @@ Author: JirenSama
                                             <label>Answer 3</label>
                                         </div>
                                         <div class="col s12 m8 l9 imageInput" style="display: none">
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message"><span class="file-icon"></span>
-                                                    <p>Drag and drop a file here or click</p>
-                                                    <p class="dropify-error">Sorry, this file is too large</p></div>
-                                                <input type="file" name="a3" class="dropify" data-disable-remove="true">
-                                                <div class="dropify-preview"><span class="dropify-render"></span>
-                                                    <div class="dropify-infos">
-                                                        <div class="dropify-infos-inner"><p
-                                                                class="dropify-filename"><span
-                                                                class="file-icon"></span> <span
-                                                                class="dropify-filename-inner"></span></p>
-                                                            <p class="dropify-infos-message">Drag and drop or click to
-                                                                replace</p></div>
-                                                    </div>
+                                            <div class="file-field input-field">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" name="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" name="i2">
                                                 </div>
                                             </div>
                                         </div>
@@ -1267,7 +1155,8 @@ Author: JirenSama
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn-floating btn-large"><i class="material-icons">add</i>
+                                            <button type="button" class="btn-floating btn-large"><i
+                                                    class="material-icons">add</i>
                                             </button>
                                             <button class="btn cyan waves-effect waves-light right submitQuestion"
                                                     type="submit"
