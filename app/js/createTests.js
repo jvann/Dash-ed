@@ -31,8 +31,7 @@ $(document).ready(function () {
 
     $('.submitQuestion:not(.toggleInput,.deleteInput)').submit(function (e) {
         e.preventDefault();
-        var options = { target: '#output' };
-        $(this).ajaxSubmit(options);
+
 
         var i = 0;
         var data = $(this).serializeArray().reduce(function (obj, item) {
