@@ -7,9 +7,9 @@
 .idea/
 
 ## Materialize Admin Template
-/Dashed/front-end
-/Dashed/grunt
-/Dashed/starter-kit
+front/Dashed/front-end
+front/Dashed/grunt
+front/Dashed/starter-kit
 
 # ********** Back **********
 node_modules
