@@ -62,8 +62,79 @@ paths:
             properties:
               data:
                 $ref: '#/definitions/User'
+  
+  /questions:
+    post:
+      operationId: createQuestion
+      summary: Create a new question
+      tags:
+        - Questions
+      parameters:
+        - name: newQuestion
+          in: body
+          schema:
+            $ref: '#/definitions/NewQuestion'
+      responses:
+        201:
+          description: Created
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/Question'
 
 definitions:
+  NewQuestion:
+    type: object
+    properties:
+      kind:
+        type: integer
+        format: int64
+        minimum: 0
+      description:
+        type: string
+      correctAnswers:
+        type: array
+        items:
+          type: string
+      incorrectAnswers:
+        type: array
+        items:
+          type: string
+    required:
+      - kind
+      - description
+      - correctAnswers
+      - incorrectAnswers
+
+  Question:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        minimum: 0
+      kind:
+        type: number
+        minimum: 0
+      description:
+        type: string
+        format: email
+      correctAnswers:
+        type: array
+        items:
+          type: string
+      incorrectAnswers:
+        type: array
+        items:
+          type: string
+    required:
+      - id
+      - kind
+      - description
+      - correctAnswers
+      - incorrectAnswers
+
   NewUser:
     type: object
     properties:
